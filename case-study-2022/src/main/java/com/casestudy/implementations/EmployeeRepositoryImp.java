@@ -76,14 +76,15 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 							address, email, phoneNumber, dateOfBirth, dateOfWedding)); 
 				}
 				cachedList = employeeList ; 
+				modificationDone = false ;
 			}catch(SQLException e) {
 				logger.error(e.getMessage()) ; 
+				return new ArrayList<Employee>(); 
 			}
 		}else {
 			logger.info("Cached data is used for getting all the instances") ; 
 		}
-		
-		modificationDone = false ; 
+	 
 		return cachedList; 
 	}
 	
