@@ -6,9 +6,19 @@ import java.util.Objects;
 import com.casestudy.utility.PrettyPrinter;
 
 /*
- * Employee class which implements Comparable<Employee>
- * Has 7 fields 
- * Primary Key -> email 
+    Process for Creating Database :
+	Employee Entity consist of 7 field (DataBase column names are given below)
+	
+	"first_name" , "last_name" , "address" , "email" , "phone_numnber" , "date_of_birth" , "date_of_wedding" 
+	
+	
+	1)  first_name -> varchar(45)
+	2)  last_name -> varchar(45)
+	3)  address -> varchar(45)
+	4)  email -> varchar(45)
+	5)  phone_number -> longblob
+	6)  date_of_birth -> date
+	7)  date_of_wedding -> date
  */
 public class Employee implements Comparable<Employee>{
 
