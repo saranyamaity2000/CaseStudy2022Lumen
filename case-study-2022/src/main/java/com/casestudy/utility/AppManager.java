@@ -33,21 +33,18 @@ public abstract class AppManager {
 	 * Show available option names
 	 */
 	public static void showAvailableOptions() {
+		System.out.println("------------------------------------------------------------------------------");
     	System.out.println("1) Add employee details \r\n"
-    			+ "\r\n"
     			+ "2) Get the List of employees by their firstName. \r\n"
-    			+ "\r\n"
     			+ "3) Get the List of employees with FirstName and Phone Number \r\n"
-    			+ "\r\n"
     			+ "4) Update the email and phoneNumber of a particular employee (by Email). \r\n"
-    			+ "\r\n"
     			+ "5) Delete Details of a Particular employee by firstName \r\n"
-    			+ "\r\n"
-    			+ "6) Get a list of employees with their firstName and emailAddress  whose Birthday falls on the given date \r\n"
-    			+ "\r\n"
-    			+ "7) Get the list of employees with their firstName and phone Number whose Wedding Anniversary falls on the given date \r\n"
-    	        + "\r\n"
+    			+ "6) Get a list of employees with their firstName and emailAddress\n"
+    			+ "whose Birthday falls on the given date \r\n"
+    			+ "7) Get the list of employees with their firstName and phone Number\n"
+    			+ "whose Wedding Anniversary falls on the given date \r\n"
 		        + "8) Exit");
+    	System.out.println("------------------------------------------------------------------------------");
     }
 	
 	/*
