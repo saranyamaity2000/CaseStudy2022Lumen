@@ -17,22 +17,19 @@ import com.casestudy.services.EmployeeService;
  * 
  */
 public final class AppManager {
+	/*
+	 * service instance which basically operations actual requests/queries 
+	 */
+	private static EmployeeService service = new EmployeeService() ; 
+
+	private static Scanner sc = new Scanner(System.in) ; 
+	
+	private static final Logger logger = LogManager.getRootLogger() ; 
 	
 	private AppManager() {
 		super() ; 
 	}
 	
-	/*
-	 * service instance which basically operations actual requests/queries 
-	 */
-	private static EmployeeService service = new EmployeeService() ; 
-	
-	/*
-	 * Scanner instance that helps to take input!
-	 */
-	private static Scanner sc = new Scanner(System.in) ; 
-	
-	private static final Logger logger = LogManager.getRootLogger() ; 
 	
 	/*
 	 * Show available option names
@@ -66,47 +63,6 @@ public final class AppManager {
     	 System.out.println("!!! You have choosen WRONG option!!!");
 	}
 	
-	/*
-	 * Handles date inputs
-	 */
-	public static LocalDate dateInputHandler() {
-		 String date = sc.nextLine() ;
-		 String[] parts = date.split("/") ;
-		 LocalDate actualDate = null ; 
-		 try {
-			 actualDate =   LocalDate.of(Integer.parseInt(parts[2]) , 
-						                        Integer.parseInt(parts[1]) , 
-			     		                        Integer.parseInt(parts[0])); 
-		 }
-		 catch(Exception e) {}
-		 
-		 try {
-			 if(actualDate == null)
-				 throw new DateFormatException("ERROR-109","Entered date is not in Correct format \n"
-				 		+ "The recommended format is dd/mm/yyyy \n"
-						+ "And do not provide extra space in between slashes") ; 
-		 }
-		 catch(DateFormatException e) {
-			 logger.error(e.getMessage()) ;  
-			 return dateInputHandler() ; 
-		 }
-		 return actualDate ; 
-	}
-	
-	
-	public static Long numberInputHandler() {
-		Long number = null ; 
-		try {
-			number = Long.parseLong(sc.nextLine()) ; 
-		}
-		catch(Exception e) {
-			logger.error(e.getMessage()) ; 
-			System.out.println("Please enter correctly again!");
-			return numberInputHandler() ; 
-		}
-		return number ; 
-	}
-	
 	
 	
 	/*
@@ -117,26 +73,26 @@ public final class AppManager {
 		 logger.info("User has choosen option number 1") ;  
 		
 		 System.out.println("Enter Employee's firstName -> ");
-		 String firstName = sc.nextLine() ;
+		 String firstName = InputHandler.getStringInput() ;
 		 
 		 System.out.println("Enter Employee's lastName");
-		 String lastName = sc.nextLine() ; 
+		 String lastName = InputHandler.getStringInput() ; 
 		 
 		 System.out.println("Enter Employee's address");
-		 String address = sc.nextLine() ; 
+		 String address = InputHandler.getStringInput() ; 
 		 
 		 System.out.println("Enter Employee's email");
-		 String email = sc.nextLine() ; 
+		 String email = InputHandler.getStringInput() ; 
 		 
 		 System.out.println("Enter Employee's phone number :");
-		 Long phoneNumber = numberInputHandler() ; 
+		 Long phoneNumber = InputHandler.getNumberInput() ; 
 		 
 		 System.out.println("Enter Employee's date of birth in dd/mm/yyyy format");
-		 LocalDate dateOfBirth = dateInputHandler() ; 
+		 LocalDate dateOfBirth = InputHandler.getDateInput() ;  
 		 
 		 
 		 System.out.println("Enter Employee's wedding date in dd/mm/yyyy format");
-		 LocalDate dateOfWedding = dateInputHandler() ; 
+		 LocalDate dateOfWedding = InputHandler.getDateInput() ; 
 		 
 		 service.addEmployee(new Employee(firstName, lastName, address, email, phoneNumber, dateOfBirth, dateOfWedding)); 
 	}
@@ -147,7 +103,7 @@ public final class AppManager {
     private static void handleChoice2() {
     	logger.info("User has choosen option number 2") ; 
     	System.out.println("Enter Employee's firstName");
-    	String firstName = sc.nextLine() ; 
+    	String firstName = InputHandler.getStringInput() ; 
     	try {
 			service.getEmployeesByFirstName(firstName);
 		} catch (NotFoundException e) {
@@ -174,11 +130,11 @@ public final class AppManager {
     private static void handleChoice4() {
     	logger.info("User has choosen option number 4") ; 
     	System.out.println("Enter the email of the employee that you want to modify");
-    	String oldEmail = sc.nextLine() ; 
+    	String oldEmail = InputHandler.getStringInput() ; 
     	System.out.println("Now enter New Mobile Number");
-    	Long phoneNumber = numberInputHandler() ; 
+    	Long phoneNumber = InputHandler.getNumberInput() ; 
     	System.out.println("Enter New Email id");
-    	String newEmail = sc.nextLine();
+    	String newEmail = InputHandler.getStringInput();
     	service.updateEmailAndPhoneNumberByEmail(newEmail, phoneNumber, oldEmail);
     }
     
@@ -188,7 +144,7 @@ public final class AppManager {
     private static void handleChoice5() {
     	logger.info("User has choosen option number 5") ; 
     	System.out.println("Enter firstName");
-    	String firstName = sc.nextLine() ; 
+    	String firstName = InputHandler.getStringInput() ; 
 		service.deleteEmployeeByFirstName(firstName);
     }
     
