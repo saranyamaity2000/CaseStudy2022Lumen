@@ -99,3 +99,11 @@ And do not provide extra space in between slashes
 [INFO ] 2022-09-24 00:30:21.549 [main]  - User has choosen option number 4
 [WARN ] 2022-09-24 00:30:28.133 [main]  - No entry present with email -> 12
 [INFO ] 2022-09-24 00:30:28.133 [main]  - Total 0 rows updated!
+[INFO ] 2022-09-24 01:19:32.549 [main]  - Query Executed -> 
+com.mysql.cj.jdbc.ClientPreparedStatement: select * from lumen_employees
+[INFO ] 2022-09-24 01:19:44.075 [main]  - User has choosen option number 3
+[INFO ] 2022-09-24 01:19:44.076 [main]  - 1 1
+[INFO ] 2022-09-24 01:19:44.076 [main]  - saran 2000
+[INFO ] 2022-09-24 01:19:44.076 [main]  - 1 23
+[INFO ] 2022-09-24 01:19:44.077 [main]  - Lionel 7974338314
+[INFO ] 2022-09-24 01:19:44.077 [main]  - somnath 9234567890

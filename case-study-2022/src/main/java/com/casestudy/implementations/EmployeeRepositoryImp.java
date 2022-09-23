@@ -22,7 +22,7 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 		super(); 
 		this.con = con ;
 		this.modificationDone = true ; 
-		this.cachedList = (List<Employee>) this.findall() ;  
+		this.cachedList = (List<Employee>) this.findAll() ;  
 	}
 	
 	@Override
@@ -54,8 +54,9 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 	}
 
 	@Override
-	public Collection<Employee> findall() {
+	public Collection<Employee> findAll() {
 		if(modificationDone) {
+			logger.info("DataBase has been updated once before, so refetching the data from the database!") ; 
 			List<Employee> employeeList = new ArrayList<>() ; 
 			try {
 				String sql = "select * from lumen_employees" ;
@@ -78,6 +79,8 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 			}catch(SQLException e) {
 				logger.error(e.getMessage()) ; 
 			}
+		}else {
+			logger.info("Cached data is used for getting all the instances") ; 
 		}
 		
 		modificationDone = false ; 

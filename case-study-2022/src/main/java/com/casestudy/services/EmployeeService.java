@@ -46,7 +46,7 @@ public class EmployeeService {
 	}
 	
 	public void getEmployeesByFirstName(String firstName) throws NotFoundException {
-		 List<Employee> empList = this.repo.findall().stream()
+		 List<Employee> empList = this.repo.findAll().stream()
 				.filter(emp -> emp.getFirstName().equals(firstName))
 				.peek(emp -> logger.info(emp))
 				.collect(Collectors.toList()); 
@@ -56,7 +56,7 @@ public class EmployeeService {
 
 	public void getEmployeesWithFirstNameAndPhoneNumber() throws NotFoundException {
 		
-		List<Employee> empList = this.repo.findall().stream()
+		List<Employee> empList = this.repo.findAll().stream()
 				.peek(emp -> logger.info(emp.getFirstName() + " " + emp.getPhoneNumber()))
 				.collect(Collectors.toList());  
 		 if(empList.size() == 0) 
@@ -64,7 +64,7 @@ public class EmployeeService {
 	}
 	
     public void getEmployeesFirstNameAndEmailByBirthDate(int dayOfMonth, int monthOfYear) throws NotFoundException{
-		List<Employee> empList = this.repo.findall().stream()
+		List<Employee> empList = this.repo.findAll().stream()
 				.filter(emp -> {
 					return dayOfMonth == emp.getDateOfBirth().getDayOfMonth() &&
 							monthOfYear == emp.getDateOfBirth().getMonthValue(); 
@@ -76,7 +76,7 @@ public class EmployeeService {
 	} 
     
     public void getEmployeesFirstNameAndPhoneNumberByWeddingDate(int dayOfMonth, int monthOfYear) throws NotFoundException {
-		List<Employee> empList = this.repo.findall().stream()
+		List<Employee> empList = this.repo.findAll().stream()
 				.filter(emp -> {
 					return dayOfMonth == emp.getDateOfWedding().getDayOfMonth() &&
 							monthOfYear == emp.getDateOfWedding().getMonthValue(); 

@@ -15,7 +15,7 @@ public interface CRUDRepository<T,P> {
 	/*
 	 * find all the available instances 
 	 */
-	public Collection<T> findall() ;
+	public Collection<T> findAll() ;
 	
 	
 	/*
