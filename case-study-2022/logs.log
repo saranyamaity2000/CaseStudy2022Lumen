@@ -1,0 +1,37 @@
+[INFO ] 2022-09-23 09:46:25.163 [main]  - 1 new entity added to the lumen_employees table!
+[INFO ] 2022-09-23 09:56:53.657 [main]  - somnath 9090
+[INFO ] 2022-09-23 09:56:53.664 [main]  - saranya 629696
+[INFO ] 2022-09-23 09:58:43.863 [main]  - firstName=somnath, lastName=halum, address=address, email=email, phoneNumber=9090, dateOfBirth=1212-12-12, dateOfWedding=2222-12-12
+[INFO ] 2022-09-23 10:00:14.965 [main]  - Total 1 rows updated!
+[INFO ] 2022-09-23 10:02:36.361 [main]  - Total 0 rows updated!
+[INFO ] 2022-09-23 10:04:52.392 [main]  - saranya 629696
+[INFO ] 2022-09-23 10:04:52.392 [main]  - somnath 9090
+[INFO ] 2022-09-23 10:07:42.163 [main]  - Total 1 rows deleted!
+[INFO ] 2022-09-23 10:08:20.728 [main]  - Total 1 rows updated!
+[INFO ] 2022-09-23 10:12:43.905 [main]  - Total 1 rows updated!
+[INFO ] 2022-09-23 10:13:01.415 [main]  - somnath 9234567890
+[INFO ] 2022-09-23 10:14:07.447 [main]  - somnath sop
+[INFO ] 2022-09-23 10:15:00.809 [main]  - somnath 9234567890
+[INFO ] 2022-09-23 16:41:01.197 [main]  - somnath 9234567890
+[INFO ] 2022-09-23 17:24:45.108 [main]  - 1 new entity added to the lumen_employees table!
+[ERROR] 2022-09-23 17:41:32.035 [main]  - ERROR-109 : Entered date is not in Correct format 
+The recommended format is dd/mm/yyyy 
+And do not provide extra space in between slashes
+[ERROR] 2022-09-23 17:41:45.713 [main]  - ERROR-109 : Entered date is not in Correct format 
+The recommended format is dd/mm/yyyy 
+And do not provide extra space in between slashes
+[ERROR] 2022-09-23 17:42:00.633 [main]  - ERROR-109 : Entered date is not in Correct format 
+The recommended format is dd/mm/yyyy 
+And do not provide extra space in between slashes
+[ERROR] 2022-09-23 17:42:15.180 [main]  - ERROR-109 : Entered date is not in Correct format 
+The recommended format is dd/mm/yyyy 
+And do not provide extra space in between slashes
+[ERROR] 2022-09-23 17:42:51.992 [main]  - For input string: "ij"
+[ERROR] 2022-09-23 17:43:14.380 [main]  - ERROR-109 : Entered date is not in Correct format 
+The recommended format is dd/mm/yyyy 
+And do not provide extra space in between slashes
+[INFO ] 2022-09-23 17:47:24.653 [main]  - 1 new entity added to the lumen_employees table!
+[ERROR] 2022-09-23 17:48:13.525 [main]  - ERROR-109 : Entered date is not in Correct format 
+The recommended format is dd/mm/yyyy 
+And do not provide extra space in between slashes
+[INFO ] 2022-09-23 17:48:31.570 [main]  - 1 new entity added to the lumen_employees table!
