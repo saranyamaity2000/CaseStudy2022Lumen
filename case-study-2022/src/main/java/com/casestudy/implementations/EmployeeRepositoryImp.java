@@ -12,7 +12,7 @@ import com.casestudy.ifaces.EmployeeRepository;
 import com.casestudy.model.Employee;
 
 public class EmployeeRepositoryImp implements EmployeeRepository<Employee, String> {
-
+    
 	private Connection con ; 
 	private List<Employee> cachedList; 
 	private boolean modificationDone;
@@ -34,6 +34,7 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 		try {
 			
 			pstmt = con.prepareStatement(sql);
+			logger.info("Query Executed -> \n" +  pstmt.toString()) ;
 			
 			pstmt.setString(1, obj.getFirstName());
 			pstmt.setString(2, obj.getLastName());
@@ -59,6 +60,8 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 			try {
 				String sql = "select * from lumen_employees" ;
 				PreparedStatement pstmt = con.prepareStatement(sql) ; 
+				logger.info("Query Executed -> \n" +  pstmt.toString()) ;
+				
 				ResultSet rs = pstmt.executeQuery() ; 
 				while(rs.next()) {
 					String firstName = rs.getString(1) ; 
@@ -93,6 +96,7 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 		PreparedStatement pstmt;
 		try {
 			pstmt = con.prepareStatement(sql);
+			logger.info("Query Executed -> \n" +  pstmt.toString()) ;
 			
 			pstmt.setString(1, email);
 			
@@ -111,6 +115,8 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 		try {
 			String sql = "update lumen_employees set email=? where email=?"  ;
 			PreparedStatement pstmt = con.prepareStatement(sql) ; 
+			logger.info("Query Executed -> \n" +  pstmt.toString()) ;
+			
 			pstmt.setString(2, email);
 			pstmt.setString(1, updatedEmail);
 			updatedRows = pstmt.executeUpdate() ; 
@@ -127,6 +133,8 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 		try {
 			String sql = "update lumen_employees set phone_number=? where email=?"  ;
 			PreparedStatement pstmt = con.prepareStatement(sql) ; 
+			logger.info("Query Executed -> \n" +  pstmt.toString()) ;
+			
 			pstmt.setString(2, email);
 			pstmt.setLong(1, updatedPhoneNumber);
 			updatedRows = pstmt.executeUpdate() ; 
@@ -148,6 +156,7 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 		try {
 			
 			pstmt = con.prepareStatement(sql);
+			logger.info("Query Executed -> \n" +  pstmt.toString()) ;
 			
 			pstmt.setString(1, firstName); 
 			
@@ -160,6 +169,4 @@ public class EmployeeRepositoryImp implements EmployeeRepository<Employee, Strin
 		
 		return rowsUpdated ;  
 	}
-	
-	
 }
