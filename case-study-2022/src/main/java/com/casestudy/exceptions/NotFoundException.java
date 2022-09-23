@@ -1,4 +1,4 @@
-package com.casestudy.error;
+package com.casestudy.exceptions;
 
 @SuppressWarnings("serial")
 public class NotFoundException extends Exception {

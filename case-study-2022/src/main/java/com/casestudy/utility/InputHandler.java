@@ -6,8 +6,8 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.casestudy.error.DateFormatException;
-import com.casestudy.error.ValueOutOfBoundException;
+import com.casestudy.exceptions.DateFormatException;
+import com.casestudy.exceptions.ValueOutOfBoundException;
 
 public final class InputHandler {
 	private static final Scanner sc = new Scanner(System.in) ; 

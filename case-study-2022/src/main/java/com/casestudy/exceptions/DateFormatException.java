@@ -1,4 +1,4 @@
-package com.casestudy.error;
+package com.casestudy.exceptions;
 
 /*
  * To handle Date Format Exceptions !

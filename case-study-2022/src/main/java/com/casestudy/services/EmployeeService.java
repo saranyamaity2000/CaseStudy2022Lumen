@@ -9,7 +9,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import com.casestudy.connection.ConnectionFactory;
-import com.casestudy.error.NotFoundException;
+import com.casestudy.exceptions.NotFoundException;
 import com.casestudy.ifaces.EmployeeRepository;
 import com.casestudy.implementations.EmployeeRepositoryImp;
 import com.casestudy.model.Employee;

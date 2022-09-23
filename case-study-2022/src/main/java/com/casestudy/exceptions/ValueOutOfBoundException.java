@@ -1,4 +1,4 @@
-package com.casestudy.error;
+package com.casestudy.exceptions;
 
 public class ValueOutOfBoundException extends Exception {
 	private String msg ; 

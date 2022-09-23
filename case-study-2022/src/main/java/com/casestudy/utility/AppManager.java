@@ -6,8 +6,8 @@ import java.util.Scanner;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.casestudy.error.DateFormatException;
-import com.casestudy.error.NotFoundException;
+import com.casestudy.exceptions.DateFormatException;
+import com.casestudy.exceptions.NotFoundException;
 import com.casestudy.model.Employee;
 import com.casestudy.services.EmployeeService;
 
