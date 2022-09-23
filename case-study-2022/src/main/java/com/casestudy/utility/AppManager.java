@@ -107,12 +107,15 @@ public final class AppManager {
 		return number ; 
 	}
 	
+	
+	
 	/*
 	 * handle choice number 1 -> Add employee details
 	 * 
 	 */
 	private static void handleChoice1() {
-		 
+		 logger.info("User has choosen option number 1") ;  
+		
 		 System.out.println("Enter Employee's firstName -> ");
 		 String firstName = sc.nextLine() ;
 		 
@@ -142,6 +145,7 @@ public final class AppManager {
 	 * handle choice number 2 - Get the List of employees by their firstName
 	 */
     private static void handleChoice2() {
+    	logger.info("User has choosen option number 2") ; 
     	System.out.println("Enter Employee's firstName");
     	String firstName = sc.nextLine() ; 
     	try {
@@ -155,6 +159,7 @@ public final class AppManager {
 	 * handle choice number 3 - Get the List of employees with FirstName and Phone Number
 	 */
     private static void handleChoice3() {
+    	logger.info("User has choosen option number 3") ; 
 		try {
 			service.getEmployeesWithFirstNameAndPhoneNumber();
 		} catch (NotFoundException e) {
@@ -167,6 +172,7 @@ public final class AppManager {
 	 *                           of a particular employee (by Email).
 	 */
     private static void handleChoice4() {
+    	logger.info("User has choosen option number 4") ; 
     	System.out.println("Enter the email of the employee that you want to modify");
     	String oldEmail = sc.nextLine() ; 
     	System.out.println("Now enter New Mobile Number");
@@ -180,6 +186,7 @@ public final class AppManager {
 	 * handle choice number 5 - Delete Details of a Particular employee by firstName
 	 */
     private static void handleChoice5() {
+    	logger.info("User has choosen option number 5") ; 
     	System.out.println("Enter firstName");
     	String firstName = sc.nextLine() ; 
 		service.deleteEmployeeByFirstName(firstName);
@@ -190,6 +197,7 @@ public final class AppManager {
 	 *                          emailAddress  whose Birthday falls on the given date"
 	 */
     private static void handleChoice6() {
+    	logger.info("User has choosen option number 6") ; 
     	System.out.println("Enter Month Number") ; 
     	int monthOfTheYear = sc.nextInt() ; 
     	System.out.println("Entger Day number of that Month");
@@ -206,6 +214,7 @@ public final class AppManager {
 	 *                          Wedding Anniversary falls on the given date "
 	 */
     private static void handleChoice7() {
+    	logger.info("User has choosen option number 7") ; 
     	System.out.println("Enter Month Number") ; 
     	int monthOfTheYear = sc.nextInt() ; 
     	System.out.println("Enter Day number of that Month");

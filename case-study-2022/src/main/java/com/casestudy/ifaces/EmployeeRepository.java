@@ -1,4 +1,4 @@
-package com.casestudy.iface;
+package com.casestudy.ifaces;
 
 public interface EmployeeRepository<T, P> extends CRUDRepository<T, P> {
 	/*

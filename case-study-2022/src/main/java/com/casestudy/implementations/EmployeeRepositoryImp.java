@@ -1,4 +1,4 @@
-package com.casestudy.implementation;
+package com.casestudy.implementations;
 
 import java.sql.*;
 import java.sql.Date;
@@ -8,7 +8,7 @@ import java.util.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.casestudy.iface.EmployeeRepository;
+import com.casestudy.ifaces.EmployeeRepository;
 import com.casestudy.model.Employee;
 
 public class EmployeeRepositoryImp implements EmployeeRepository<Employee, String> {

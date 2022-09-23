@@ -1,4 +1,4 @@
-package com.casestudy.iface;
+package com.casestudy.ifaces;
 
 import java.util.*;
 
