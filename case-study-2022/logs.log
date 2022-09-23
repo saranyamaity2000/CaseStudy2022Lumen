@@ -35,3 +35,37 @@ And do not provide extra space in between slashes
 The recommended format is dd/mm/yyyy 
 And do not provide extra space in between slashes
 [INFO ] 2022-09-23 17:48:31.570 [main]  - 1 new entity added to the lumen_employees table!
+[INFO ] 2022-09-23 22:56:44.086 [main]  - {
+  "firstName": "somnath",
+  "lastName": "halum",
+  "address": "address",
+  "email": "sop",
+  "phoneNumber": 9234567890,
+  "dateOfBirth": {
+    "year": 1212,
+    "month": 12,
+    "day": 12
+  },
+  "dateOfWedding": {
+    "year": 2222,
+    "month": 12,
+    "day": 12
+  }
+}
+[INFO ] 2022-09-23 23:03:40.404 [main]  - {
+  "firstName": "somnath",
+  "lastName": "halum",
+  "address": "address",
+  "email": "sop",
+  "phoneNumber": 9234567890,
+  "dateOfBirth": {
+    "year": 1212,
+    "month": 12,
+    "day": 12
+  },
+  "dateOfWedding": {
+    "year": 2222,
+    "month": 12,
+    "day": 12
+  }
+}

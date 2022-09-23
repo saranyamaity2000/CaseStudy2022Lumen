@@ -3,6 +3,8 @@ package com.casestudy.model;
 import java.time.LocalDate;
 import java.util.Objects;
 
+import com.casestudy.utility.PrettyPrinter;
+
 /*
  * Employee class which implements Comparable<Employee>
  * Has 7 fields 
@@ -119,8 +121,6 @@ public class Employee implements Comparable<Employee>{
 	
 	@Override
 	public String toString() {
-		return "firstName=" + firstName + ", lastName=" + lastName + ", address=" + address + ", email="
-				+ email + ", phoneNumber=" + phoneNumber + ", dateOfBirth=" + dateOfBirth + ", dateOfWedding="
-				+ dateOfWedding ;
+		return PrettyPrinter.toJson(this) ; 
 	}
 }

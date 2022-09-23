@@ -12,11 +12,16 @@ import com.casestudy.model.Employee;
 import com.casestudy.services.EmployeeService;
 
 /*
- * AppManager is a abstract class that helps to handle user choices
+ * AppManager's constructor is private because it should not have an instance
  * It is not supposed to be used using it's instance so I have made it is made abstract 
  * 
  */
-public abstract class AppManager {
+public final class AppManager {
+	
+	private AppManager() {
+		super() ; 
+	}
+	
 	/*
 	 * service instance which basically operations actual requests/queries 
 	 */
@@ -106,7 +111,7 @@ public abstract class AppManager {
 	 * handle choice number 1 -> Add employee details
 	 * 
 	 */
-	public static void handleChoice1() {
+	private static void handleChoice1() {
 		 
 		 System.out.println("Enter Employee's firstName -> ");
 		 String firstName = sc.nextLine() ;
@@ -136,7 +141,7 @@ public abstract class AppManager {
 	/*
 	 * handle choice number 2 - Get the List of employees by their firstName
 	 */
-    public static void handleChoice2() {
+    private static void handleChoice2() {
     	System.out.println("Enter Employee's firstName");
     	String firstName = sc.nextLine() ; 
     	try {
@@ -149,7 +154,7 @@ public abstract class AppManager {
     /*
 	 * handle choice number 3 - Get the List of employees with FirstName and Phone Number
 	 */
-    public static void handleChoice3() {
+    private static void handleChoice3() {
 		try {
 			service.getEmployeesWithFirstNameAndPhoneNumber();
 		} catch (NotFoundException e) {
@@ -161,7 +166,7 @@ public abstract class AppManager {
 	 * handle choice number 4 -  Update the email and phoneNumber 
 	 *                           of a particular employee (by Email).
 	 */
-    public static void handleChoice4() {
+    private static void handleChoice4() {
     	System.out.println("Enter the email of the employee that you want to modify");
     	String oldEmail = sc.nextLine() ; 
     	System.out.println("Now enter New Mobile Number");
@@ -174,7 +179,7 @@ public abstract class AppManager {
     /*
 	 * handle choice number 5 - Delete Details of a Particular employee by firstName
 	 */
-    public static void handleChoice5() {
+    private static void handleChoice5() {
     	System.out.println("Enter firstName");
     	String firstName = sc.nextLine() ; 
 		service.deleteEmployeeByFirstName(firstName);
@@ -184,7 +189,7 @@ public abstract class AppManager {
 	 * handle choice number 6 - Get a list of employees with their firstName and
 	 *                          emailAddress  whose Birthday falls on the given date"
 	 */
-    public static void handleChoice6() {
+    private static void handleChoice6() {
     	System.out.println("Enter Month Number") ; 
     	int monthOfTheYear = sc.nextInt() ; 
     	System.out.println("Entger Day number of that Month");
@@ -200,7 +205,7 @@ public abstract class AppManager {
 	 * handle choice number 7 - Get the list of employees with their firstName and phone Number whose
 	 *                          Wedding Anniversary falls on the given date "
 	 */
-    public static void handleChoice7() {
+    private static void handleChoice7() {
     	System.out.println("Enter Month Number") ; 
     	int monthOfTheYear = sc.nextInt() ; 
     	System.out.println("Enter Day number of that Month");
